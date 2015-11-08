@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="arduino" Class="ArduinoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ALLAN;Initial Catalog=arduino;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="arduinoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.usuarios" Member="usuarios">
+    <Type Name="usuario">
+      <Column Name="code" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="vencido" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="multas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="usuario_paso" Member="pasos" ThisKey="code" OtherKey="code" Type="paso" />
+    </Type>
+  </Table>
+  <Table Name="dbo.pasos" Member="pasos">
+    <Type Name="paso">
+      <Column Name="code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="datex" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="vencido" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="usuario_paso" Member="usuario" ThisKey="code" OtherKey="code" Type="usuario" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

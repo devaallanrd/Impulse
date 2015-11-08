@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Arduino">
+  <DataContextMoniker Name="/ArduinoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3a20c73a-3273-4e32-a5ba-a62926204d78" absoluteBounds="4.125, 1.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ArduinoDataContext/usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f37a14d4-e62e-4543-90fb-053a76be2344" absoluteBounds="4.14, 2.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86465629-3c06-434e-8132-876558ae49ea" absoluteBounds="1.375, 1.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ArduinoDataContext/paso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93dc4bed-db70-4092-9214-2251111cac10" absoluteBounds="1.3900000000000001, 1.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 2.25564697265625); (3.375 : 2.25564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ArduinoDataContext/usuario/usuario_paso" />
+      <nodes>
+        <classShapeMoniker Id="3a20c73a-3273-4e32-a5ba-a62926204d78" />
+        <classShapeMoniker Id="86465629-3c06-434e-8132-876558ae49ea" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
