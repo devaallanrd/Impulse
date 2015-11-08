@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web.Controllers;
 using WEBUI.Models;
 using WEBUI.Providers;
 
@@ -13,6 +14,7 @@ namespace WEBUI.Controllers
     {
 
         string Card;
+     
 
         public ActionResult Index()
         {
@@ -33,22 +35,36 @@ namespace WEBUI.Controllers
             //Aqui voy al repositorio de Usuarios con el # de tarjeta leida arriba 
             //Hay que pasarlo por una interfaz
             Usuario user = new UsuariosRepositorio().EncontrarUsuario(Card);
+            
             string ret = "";
+
+            
             if (user.Vencido == "true")
             {
-                ret = "<b><h1>[" + user.Nombre +"]</h1></b>  <br> No ha pagado el marchamo"
+                string tweet = user.Nombre + "- Le recordamos que debe pagar su derecho de circulacion";
+                new TwitterController(tweet);
+                ret =  "<b><h1>[" + user.Nombre +"]</h1></b>  <br> No ha pagado el marchamo"
                 + "<br> Ahora usted tiene : <h2> [" + user.Multas + "] Multas </h2>   <br> "
                 + "<a href='http://portal.ins-cr.com/portal.ins-cr.com/Encontrarnos/Recaudadores/'>Puede cancelar en cualquier de nuestras oficinas </a>";
+                
+           
+              
             }
             else
             {
-                ret = "<b><h1>[" + user.Nombre + "]</h1></b>  <br> Esta al dia  con su marchamo"
+                string tweet = user.Nombre + "- Gracias por estar al dia con su derecho de circulacion";
+                new TwitterController(tweet);
+
+                ret =  "<b><h1>[" + user.Nombre + "]</h1></b>  <br> Esta al dia  con su marchamo"
                 + "<br> Usted tiene : <h2> [" + user.Multas + "]  </h2> Multas sin resolver    <br> "
                 + "<a href='http://portal.ins-cr.com/portal.ins-cr.com/Encontrarnos/Recaudadores/'>Puede cancelar en cualquier de nuestras oficinas </a>";
-           
+               
+          
+             
             }
            
-            return new JsonResult { Data = ret, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+          
+            return new JsonResult { Data = ret , JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
         
