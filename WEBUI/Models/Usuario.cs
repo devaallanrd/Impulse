@@ -10,7 +10,10 @@ namespace WEBUI.Models
        
 
         public string Code { get; set; }
-        public string Nombre { get; set; }
+
+        public string ID { get; set; }
+        public string Propietario { get; set; }
+        public string Auto { get; set; }
         public string Vencido { get; set; }
         public int Multas { get; set; }
     }

@@ -17,7 +17,9 @@ namespace WEBUI.Providers
                            select new Models.Usuario
                            {
                                Code = u.code,
-                               Nombre = u.nombre,
+                               ID = u.id,
+                               Auto = u.automovil,
+                               Propietario = u.propietario,
                                Vencido = u.vencido,
                                Multas = (int) u.multas
                                
@@ -31,18 +33,26 @@ namespace WEBUI.Providers
         public Models.Usuario EncontrarUsuario(string code)
         {
 
+            //Mi lista de todos los usuarios encontrados
             IList<Models.Usuario> users = EncontrarTodos();
             
+            //Modelo de usuario esta en nulo
             Models.Usuario encontrado = new Models.Usuario(); 
 
+            //Para cada usuario
             foreach (Models.Usuario usuario in users)
             {
+
+                //SI el codigo == code
                 if (code == usuario.Code)
                 {
                    
+                    //Usuario esta vencido
                     if (usuario.Vencido == "true") {
+                        //Hagale una multa
                         UpdateMulta(code);
                     }
+                    //Retorne al usuario que me encontro
                     encontrado = usuario;
                 }
             }
@@ -80,7 +90,7 @@ namespace WEBUI.Providers
             }
         }
 
-        public void PagarMarchamo(string codex)
+        public void ToggleMarchamo(string codex, string vencido)
         {
             // Query the database for the row to be updated.
             var query =

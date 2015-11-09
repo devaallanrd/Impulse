@@ -9,7 +9,11 @@
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="http://css-spinners.com/css/spinner/pulse.css" type="text/css">
 </head>
-<body onload="GetArduino()">
+<body onload="GetArduino();">
+
+    <audio id="xyz" src="http://www.freesound.org/data/previews/144/144418_62484-lq.mp3" preload="auto"></audio>
+
+  
     <div class="navbar navbar-inverse navbar-fixed-top ">
         <div class="container ">
             <div class="navbar-header">
@@ -25,7 +29,9 @@
                     <li>
                         @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, null)
                     </li>
-                    <li>@Html.ActionLink("Documentacion", "Welcome", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Documentacion", "Index", "Home", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Perfiles", "Index", "Arduino", new { area = "" }, null)</li>
+
                 </ul>
             </div>
         </div>
@@ -37,7 +43,47 @@
             <p>&copy; @DateTime.Now.Year - Marchamos Bot</p>
         </footer>
     </div>
-    <script>function GetArduino() { $.get("/Home/GetArduino", function (data) { $("#codex").addClass('hidden'); j = ""; j = data; if (j != "") { $("#codex").html(data); $("#codex").removeClass('hidden'); setTimeout(function () { GetArduino(); }, 2000); } }); }</script>
+    <script>
+    function GetArduino() {
+        $.get("/Home/GetArduino/", function (data) {
+
+         //   j = "nada"; 
+          //  j = data;
+
+           // if (j != "nada") {
+            //alert(data);
+                $("#codex").html(data);
+               
+                setTimeout(function () {
+                    GetArduino();
+                }, 2000);
+         //   }
+        });
+    }
+
+    function getUserData() {
+        var s = $('#idU').val();
+
+        $.get("/Arduino/GetUsers/", function (data) {
+
+            var cont = 0;
+            
+           
+            while (cont != data.length) {
+                
+                if (data[cont].ID == s) {    
+                    $('#nombre').html(data[cont].Propietario);
+                    $('#tarjeta').html(data[cont].Code);
+                    $('#auto').html(data[cont].Auto);
+                    $('#multas').html(data[cont].Multas);
+                }
+                cont = cont + 1;
+            }
+           // alert(data[0].Nombre);
+           
+        }); 
+    }
+    </script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

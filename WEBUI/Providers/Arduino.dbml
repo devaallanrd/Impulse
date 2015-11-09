@@ -3,7 +3,9 @@
   <Table Name="dbo.usuarios" Member="usuarios">
     <Type Name="usuario">
       <Column Name="code" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nombre" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="id" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="propietario" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="automovil" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="vencido" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="multas" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="usuario_paso" Member="pasos" ThisKey="code" OtherKey="code" Type="paso" />

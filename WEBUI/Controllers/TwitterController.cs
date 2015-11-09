@@ -21,19 +21,25 @@ namespace Web.Controllers
         public TwitterController(string x)
         {
             //Credenciales de mi app en https://apps.twitter.com/
-            string consumerKey = "JY8GyTVOsBFsx8l0u4c69k4PF"; // Clave del consumidor de la aplicación
-            string consumerSecret = "OmjAaD0AYjWIuwakqDe0tE8NorR13phBZ1pv3BUQf4bnJoT8oe"; // Secreto del consumidor de la aplicación
-            string accessToken = "62594043-NhFHPL96RVmoGaSCSPozWK4D1NwVXo6kLYePzjIPh"; // El token de acceso concedido después de la autorización OAuth
-            string accessTokenSecret = "knbtbEte8LJjJhql65J6KbppiE5PUif8hOJx1pdWSSQLV"; // El secreto de acceso simbólico otorgado después de la autorización OAuth
+           /// string consumerKey = "kR4y7G1mh6lreuSBKEx7EnJOR"; // Clave del consumidor de la aplicación
+           // string consumerSecret = "RdzSmMcngGNXNgdgpgbuRI0ldGRc3EDfHnaPhTIrliU46iuLV1"; // Secreto del consumidor de la aplicación
+           // string accessToken = "62594043-wpg1rczxxnhMcdXNyNkzAEDcv7pwcbDsyCffv2NzI"; // El token de acceso concedido después de la autorización OAuth
+          //  string accessTokenSecret = "fiMmlk8B7zpDVWYaPj9v5VzkBNHwmG6eJzRXfe42oBV57"; // El secreto de acceso simbólico otorgado después de la autorización OAuth
 
 
             // Generar credenciales que queremos utilizar
             // var creds = new TwitterCredentials(consumerKey, consumerSecret, accessToken, accessTokenSecret);
-             Auth.ApplicationCredentials = new TwitterCredentials(consumerKey, consumerSecret, accessToken, accessTokenSecret);
+            // Auth.ApplicationCredentials = new TwitterCredentials(consumerKey, consumerSecret, accessToken, accessTokenSecret);
+             Auth.ApplicationCredentials = new TwitterCredentials("kR4y7G1mh6lreuSBKEx7EnJOR", "RdzSmMcngGNXNgdgpgbuRI0ldGRc3EDfHnaPhTIrliU46iuLV1",
+                 "62594043-wpg1rczxxnhMcdXNyNkzAEDcv7pwcbDsyCffv2NzI", "fiMmlk8B7zpDVWYaPj9v5VzkBNHwmG6eJzRXfe42oBV57");
+            
             // Utilice el método ExecuteOperationWithCredentials para invocar una operación
             // con un conjunto específico de credenciales
-             var tweet = Tweet.PublishTweet(x);
+             Tweet.PublishTweet(x);
+
+             Auth.ApplicationCredentials = null;
         }
+
       
     }
 }

@@ -90,7 +90,11 @@ namespace WEBUI.Providers
 		
 		private string _code;
 		
-		private string _nombre;
+		private string _id;
+		
+		private string _propietario;
+		
+		private string _automovil;
 		
 		private string _vencido;
 		
@@ -102,8 +106,12 @@ namespace WEBUI.Providers
     partial void OnCreated();
     partial void OncodeChanging(string value);
     partial void OncodeChanged();
-    partial void OnnombreChanging(string value);
-    partial void OnnombreChanged();
+    partial void OnidChanging(string value);
+    partial void OnidChanged();
+    partial void OnpropietarioChanging(string value);
+    partial void OnpropietarioChanged();
+    partial void OnautomovilChanging(string value);
+    partial void OnautomovilChanged();
     partial void OnvencidoChanging(string value);
     partial void OnvencidoChanged();
     partial void OnmultasChanging(System.Nullable<int> value);
@@ -135,22 +143,62 @@ namespace WEBUI.Providers
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nombre", DbType="VarChar(30)")]
-		public string nombre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(12)")]
+		public string id
 		{
 			get
 			{
-				return this._nombre;
+				return this._id;
 			}
 			set
 			{
-				if ((this._nombre != value))
+				if ((this._id != value))
 				{
-					this.OnnombreChanging(value);
+					this.OnidChanging(value);
 					this.SendPropertyChanging();
-					this._nombre = value;
-					this.SendPropertyChanged("nombre");
-					this.OnnombreChanged();
+					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_propietario", DbType="VarChar(15)")]
+		public string propietario
+		{
+			get
+			{
+				return this._propietario;
+			}
+			set
+			{
+				if ((this._propietario != value))
+				{
+					this.OnpropietarioChanging(value);
+					this.SendPropertyChanging();
+					this._propietario = value;
+					this.SendPropertyChanged("propietario");
+					this.OnpropietarioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_automovil", DbType="VarChar(30)")]
+		public string automovil
+		{
+			get
+			{
+				return this._automovil;
+			}
+			set
+			{
+				if ((this._automovil != value))
+				{
+					this.OnautomovilChanging(value);
+					this.SendPropertyChanging();
+					this._automovil = value;
+					this.SendPropertyChanged("automovil");
+					this.OnautomovilChanged();
 				}
 			}
 		}
