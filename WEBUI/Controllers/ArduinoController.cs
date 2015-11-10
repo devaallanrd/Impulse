@@ -13,8 +13,8 @@ namespace WEBUI.Controllers
     public class ArduinoController : Controller
     {
 
-    
-     
+
+        string Card;
 
         public ActionResult Index()
         {
@@ -22,6 +22,14 @@ namespace WEBUI.Controllers
             ViewBag.Title = "Arduino Get DB 2015";
             return View();
           
+        }
+
+        public ActionResult Registrar()
+        {
+
+            ViewBag.Title = "Registrar";
+            return View();
+
         }
 
        
@@ -33,7 +41,36 @@ namespace WEBUI.Controllers
             return new JsonResult { Data = list , JsonRequestBehavior = JsonRequestBehavior.AllowGet };
         }
 
-        
+        public JsonResult GetArduino()
+        {
+            //Nuevo Modelo de Arduino 
+            //Esto deberia ser un contexto de acceso a datos
+            Card = new ArduinoModel().readData();
+
+
+            //Aqui voy al repositorio de Usuarios con el # de tarjeta leida arriba 
+            //Hay que pasarlo por una interfaz
+            Usuario user = new UsuariosRepositorio().EncontrarUsuario(Card);
+            string ret = "";
+            if (user.Code == null)
+            {
+                ret = Card;
+            }
+            else { 
+            if ((user.Code == Card) | (user.Code != "") | (user.Code != null))
+            {
+                ret = "Ya esta registrada";
+            }
+            else
+            {
+                ret = Card;
+            }
+            }
+
+            return new JsonResult { Data = ret, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+
+
+        }
       
     }
 }

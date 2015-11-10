@@ -9,24 +9,17 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/marchamos")
     <link rel="stylesheet" href="http://css-spinners.com/css/spinner/pulse.css" type="text/css">
-
-    
-
-
-
-
-
-
-
+    <link type="text/css" rel="stylesheet" href="https://abs.twimg.com/font/gotham-narrow-v3.css" media="all" />
+  
 </head>
-<body onload="GetArduino();">
+<body onload="//GetArduino();">
 
     <audio id="xyz"  preload="auto">
         <source src="http://www.freesound.org/data/previews/144/144418_62484-lq.mp3" type="audio/mp3">
     </audio>
 
   
-    <div class="navbar navbar-inverse navbar-fixed-top ">
+    <div class="navbar navbar-default navbar-fixed-top ">
         <div class="container ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,16 +27,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Marchamos Bot", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Marchamos IMPulse", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse ">
                 <ul class="nav navbar-nav">
                     <li>
                         @Html.ActionLink("Inicio", "Index", "Home", new { area = "" }, null)
                     </li>
-                    <li>@Html.ActionLink("Documentacion", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Perfiles", "Index", "Arduino", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("Perfiles", "Index", "Arduino", new { area = "" }, null)</li>
+                     <li>@Html.ActionLink("Consultas", "Index", "Arduino", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Registro", "Registrar", "Arduino", new { area = "" }, null)</li>
 
                 </ul>
             </div>
@@ -53,7 +45,7 @@
         @RenderBody()
         <hr />
         <footer class="text-center">
-            <p>&copy; @DateTime.Now.Year - Marchamos Bot</p>
+            <p>&copy; @DateTime.Now.Year - IMPulse</p>
         </footer>
     </div>
    

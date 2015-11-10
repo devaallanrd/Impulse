@@ -1,23 +1,58 @@
-﻿<div class="row">
-    <div class="col-md-3">
-        <hr />
-        <h2> Marchamos 2015</h2>
-        <h3 class="lead">
-            Todo listo! Detectaremos cuando un automóvil registrado pase por aquí  .
-        </h3><hr />
-        <div class="pulse-loader" style="margin-left:35%">
-            Loading…
+﻿<div class="row container">
+    <div class="col-md-2">
+        
+    </div>
+    <div class=" col-md-8 text-center jumbotron ">
+     
+        <div id="demo" class="collapse">
+
+            <img src="~/pulse2.png" />
+    
+            <table class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Propietario</th>
+                        <th>ID</th>
+               
+                        <th>Auto</th>
+                        <th>Vencido</th>
+                        <th>Multas</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="pulse-prop"></td>
+                        <td id="pulse-id"></td>
+               
+                        <td id="pulse-auto"></td>
+                        <td id="pulse-vencido"></td>
+                        <td id="pulse-multas"></td>
+                        <td id="pulse-total"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
         </div>
+        
+        <button onclick="GetArduino();"  type="button" class="pulse-loader" data-toggle="collapse"
+                data-target="#demo" style="height:200px;width:190px;outline: none;">
+            <img src="~/click5.png"/>
+        </button>
+         <hr />
+       
+       
     </div>
-    <div class=" col-md-6 text-center  ">
-
-        <p id="codex" class="jumbotron"> </p>
-
-    </div>
-    <div class="col-md-3">
+    <div class="col-md-2">
 
         <!--
         <a class="twitter-timeline" href="https://twitter.com/aallanrd" data-widget-id="458358967274463232">Tweets por aallanrd.</a>
-        --></div>
+        -->
+       
+       
+    
+    </div>
     
 </div>
