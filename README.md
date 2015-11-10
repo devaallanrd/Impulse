@@ -4,11 +4,26 @@ TODO: Write a project description
 
 ## Installation
 
-TODO: Describe the installation process
+1. Descargue, fork o clone este proyecto de Visual Studio 2003 
+Contiene 4 Librerias C# (´Arduino´, ´Modelo´, ´Repositorio´, ´Servicio´) y 
+un proyecto WEB C# MVC (  WEBUI ) :
+
+2. Ir a Configuracion de puerto de Arduino en Impulse/Arduino/Read.cs 
+
+3. Crear la  Base de Datos ´Impulse/db_marchamos_2015.sql´ y configurar el .DBML ´(/Impulse/Repositorio/DB.dbml)´ 
+ para que cargue la tabla Usuarios de la Base de Datos que acaba de crear.
+
+Si hace Debug de una vez la página va a cargar pero la conexion con la Base de Datos va a fallar y el puerto de 
+su
 
 ## Usage
 
-TODO: Write usage instructions
+Aqui hay varios procesos (Leer de Arduino , Consultar a Base de Datos, Desplegar en Pantalla)
+
+Leer de Arduino 
+
+
+bundles.Add(new ScriptBundle("~/bundles/marchamos").Include("~/Scripts/marchamos.js"));
 
 ## Contributing
 
