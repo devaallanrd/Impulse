@@ -36,6 +36,7 @@ namespace WEBUI.Controllers
             //Hay que pasarlo por una interfaz
             Usuario user = new UsuariosRepositorio().EncontrarUsuario(Card);
             
+            
             string ret = "";
            // string tweet = "Nothing yet";
 

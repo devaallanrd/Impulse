@@ -7,7 +7,17 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/marchamos")
     <link rel="stylesheet" href="http://css-spinners.com/css/spinner/pulse.css" type="text/css">
+
+    
+
+
+
+
+
+
+
 </head>
 <body onload="GetArduino();">
 
@@ -33,6 +43,7 @@
                     </li>
                     <li>@Html.ActionLink("Documentacion", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("Perfiles", "Index", "Arduino", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Perfiles", "Index", "Arduino", new { area = "" }, null)</li>
 
                 </ul>
             </div>
@@ -45,51 +56,7 @@
             <p>&copy; @DateTime.Now.Year - Marchamos Bot</p>
         </footer>
     </div>
-    <script>
-    function GetArduino() {
-        $.get("/Home/GetArduino/", function (data) {
-
-        
-            $("#codex").html(data);
-
-               if ((data == "")) {
-                   GetArduino();
-               }
-               else {
-                   $("#xyz").trigger('load');
-                   $("#xyz").trigger('play');
-                setTimeout(function () {
-                    GetArduino();
-                }, 2000);
-                }
-
-
-        });
-    }
-
-    function getUserData() {
-        var s = $('#idU').val();
-
-        $.get("/Arduino/GetUsers/", function (data) {
-
-            var cont = 0;
-            
-           
-            while (cont != data.length) {
-                
-                if (data[cont].ID == s) {    
-                    $('#nombre').html(data[cont].Propietario);
-                    $('#tarjeta').html(data[cont].Code);
-                    $('#auto').html(data[cont].Auto);
-                    $('#multas').html(data[cont].Multas);
-                }
-                cont = cont + 1;
-            }
-           // alert(data[0].Nombre);
-           
-        }); 
-    }
-    </script>
+   
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
