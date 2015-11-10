@@ -49,19 +49,10 @@
     function GetArduino() {
         $.get("/Home/GetArduino/", function (data) {
 
-          
-            
+        
+            $("#codex").html(data);
 
-         //   j = "nada"; 
-          //  j = data; Cambio Josué
-
-           // if (j != "nada") {
-            //alert(data);
-        //    if (data == null) {
-          //      GetArduino();
-           // }else{
-               $("#codex").html(data);
-               if (data == "") {
+               if ((data == "")) {
                    GetArduino();
                }
                else {
@@ -71,7 +62,7 @@
                     GetArduino();
                 }, 2000);
                 }
-             //  }
+
 
         });
     }
