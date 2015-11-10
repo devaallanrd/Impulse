@@ -1,11 +1,11 @@
 ﻿
 <div class="row">
-    <div class="col-md-4">
-        <h2>Transacciones con BD </h2>
+    <div class="col-md-12 text-center">
+        <h2>Consultas Marchamo</h2>
    
          <input id="idU" name="id" type="text" class="form-control" placeholder="Su ID" />
        
-         
+      
         <br/>  <button onclick="getUserData()" class="btn btn-danger"> Buscar </button> 
         <p>
 
@@ -13,17 +13,31 @@
 
     </div>
 
-    <div class="col-md-6">
-        <h2>Resultados</h2>
-        <hr />
-        <label>Nombre</label>
-        <h1 id="nombre"></h1>
-        <label>Tarjeta</label>
-        <h2 id="tarjeta"></h2>
-        <label>Auto</label>
-        <h3 id="auto"></h3>
-        <label>Multas</label>
-        <h3 id="multas"></h3>
+    <div class="col-md-5">
+      
+     
+        <div class="panel">
+            <div class="panel-heading">
+                <h2>Resultados</h2>
+            </div>
+            <div class="panel-body">
+                Usted tiene un total de :
+                <h3 id="multas"></h3> Multas
+                <label>Nombre</label>
+                <h2 id="nombre"></h2>
+                <label>Tarjeta</label>
+                <h5 id="tarjeta"></h5>
+                <label>Auto</label>
+                <h4 id="auto"></h4>
+                <label>Multas</label>
+            </div>
+            <div class="panel-footer">
+
+            </div>
+        </div>
+
+      
+       
 
    </div>
    

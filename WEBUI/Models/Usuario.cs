@@ -16,5 +16,10 @@ namespace WEBUI.Models
         public string Auto { get; set; }
         public string Vencido { get; set; }
         public int Multas { get; set; }
+
+        public string toStringy()
+        {
+            return Code + "/" + ID;
+        }
     }
 }

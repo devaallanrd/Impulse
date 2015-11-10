@@ -49,9 +49,12 @@ namespace WEBUI.Providers
                    
                     //Usuario esta vencido
                     if (usuario.Vencido == "true") {
+                        usuario.Multas = usuario.Multas + 1;
                         //Hagale una multa
                         UpdateMulta(code);
+                       
                     }
+                  
                     //Retorne al usuario que me encontro
                     encontrado = usuario;
                 }
