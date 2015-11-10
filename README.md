@@ -5,7 +5,7 @@ TODO: Write a project description
 ## Installation
 
 1. Descargue, fork o clone este proyecto de Visual Studio 2003 
-Contiene 4 Librerias C# (`Arduino´, `Modelo´, `Repositorio´, `Servicio´) y 
+Contiene 4 Librerias C# (`Arduino`, `Modelo`, `Repositorio`, `Servicio`) y 
 un proyecto WEB C# MVC (  WEBUI ) :
 
 2. Ir a Configuracion de puerto de Arduino en Impulse/Arduino/Read.cs 
@@ -28,7 +28,7 @@ bundles.Add(new ScriptBundle("~/bundles/marchamos").Include("~/Scripts/marchamos
 ## Contributing
 
 1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
+2. Create your feature branch: `git checkout -b my-new-feature` `wtf`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
