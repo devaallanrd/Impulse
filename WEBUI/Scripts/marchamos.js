@@ -49,6 +49,39 @@ function getUserData() {
     });
 }
 
+
+function RegisterT() {
+
+    var s = $('#idR').val();
+    var s = $('#prR').val();
+    var s = $('#prR').val();
+    var s = $('#prR').val();
+    var s = $('#prR').val();
+
+    $.get("/Arduino/Insert/", function (data) {
+
+        var cont = 0;
+
+
+        while (cont != data.length) {
+
+            if (data[cont].ID == s) {
+                $("#search-id").html(data[cont].ID);
+                $("#search-prop").html(data[cont].Propietario);
+                $("#search-auto").html(data[cont].Auto);
+                $("#search-vencido").html(data[cont].Vencido);
+                $("#search-multas").html(data[cont].Multas);
+            }
+            cont = cont + 1;
+        }
+        // alert(data[0].Nombre);
+
+    });
+}
+
+
+
+
 function Register() {
     $.get("/Arduino/GetArduino/", function (data) {
 
