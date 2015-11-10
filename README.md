@@ -4,8 +4,7 @@ TODO: Write a project description
 
 ## Installation
 
-1. *Descargue*, *fork* o *clone* este proyecto de **Visual Studio 2003** .
-
+1. *Descargue*, *fork* o *clone* este proyecto de **Visual Studio 2013** .
 Contiene 4 Librerias C# (`Arduino`, `Modelo`, `Repositorio`, `Servicio`) y 
 un proyecto WEB C# MVC (  `WEBUI` ) :
 
