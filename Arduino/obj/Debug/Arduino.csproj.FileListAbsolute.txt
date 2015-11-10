@@ -3,3 +3,9 @@ C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\Arduino\Arduino\bin\Debu
 C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\Arduino\Arduino\bin\Debug\Arduino.pdb
 C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\Arduino\Arduino\obj\Debug\Arduino.exe
 C:\Users\aallanrd\Documents\Visual Studio 2013\Projects\Arduino\Arduino\obj\Debug\Arduino.pdb
+C:\Users\Josue\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.exe.config
+C:\Users\Josue\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.exe
+C:\Users\Josue\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.pdb
+C:\Users\Josue\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.csprojResolveAssemblyReference.cache
+C:\Users\Josue\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.exe
+C:\Users\Josue\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.pdb
