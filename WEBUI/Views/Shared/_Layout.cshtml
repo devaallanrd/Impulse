@@ -11,7 +11,9 @@
 </head>
 <body onload="GetArduino();">
 
-    <audio id="xyz" src="http://www.freesound.org/data/previews/144/144418_62484-lq.mp3" preload="auto"></audio>
+    <audio id="xyz"  preload="auto">
+        <source src="http://www.freesound.org/data/previews/144/144418_62484-lq.mp3" type="audio/mp3">
+    </audio>
 
   
     <div class="navbar navbar-inverse navbar-fixed-top ">
@@ -47,17 +49,30 @@
     function GetArduino() {
         $.get("/Home/GetArduino/", function (data) {
 
+          
+            
+
          //   j = "nada"; 
           //  j = data;
 
            // if (j != "nada") {
             //alert(data);
-                $("#codex").html(data);
-               
+        //    if (data == null) {
+          //      GetArduino();
+           // }else{
+               $("#codex").html(data);
+               if (data == "") {
+                   GetArduino();
+               }
+               else {
+                   $("#xyz").trigger('load');
+                   $("#xyz").trigger('play');
                 setTimeout(function () {
                     GetArduino();
                 }, 2000);
-         //   }
+                }
+             //  }
+
         });
     }
 
