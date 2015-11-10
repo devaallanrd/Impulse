@@ -35,43 +35,17 @@ namespace WEBUI.Controllers
             //Aqui voy al repositorio de Usuarios con el # de tarjeta leida arriba 
             //Hay que pasarlo por una interfaz
             Usuario user = new UsuariosRepositorio().EncontrarUsuario(Card);
-            
-            
-            string ret = "";
-           // string tweet = "Nothing yet";
-
-            if (user.ID == null)
-            {
-                ret = "";
-            }
-            else { 
-            if (user.Vencido == "true")
-            {
-                //tweet = user.Nombre + "- Le recordamos que debe pagar su derecho de circulacion";
-               // new TwitterController("M |" );
-                ret =  "<b><h1>[" + user.Propietario +"]</h1></b>  <br> No ha pagado el marchamo"
-                + "<br> Ahora usted tiene : <h2> [" + user.Multas + "] Multas </h2>   <br> "
-                + "<a href='http://portal.ins-cr.com/portal.ins-cr.com/Encontrarnos/Recaudadores/'>Puede cancelar en cualquier de nuestras oficinas </a>";
-               
-            }
-            else
-            {
-               // tweet = user.Nombre + "- Gracias por estar al dia con su derecho de circulacion";
-              //  new TwitterController("P |" );
-                ret =  "<b><h1>[" + user.Propietario + "]</h1></b>  <br> Esta al dia  con su marchamo"
-                + "<br> Usted tiene : <h2> [" + user.Multas + "]  </h2> Multas sin resolver    <br> "
-                + "<a href='http://portal.ins-cr.com/portal.ins-cr.com/Encontrarnos/Recaudadores/'>Puede cancelar en cualquier de nuestras oficinas </a>";
-
-
-
-            }
-            }
 
            
-           
-          
-            return new JsonResult { Data = ret, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
-        }
+            ModelViewUsuario modelViewUsuario = new ModelViewUsuario(user);
+
+            IList<object> UserView = modelViewUsuario.getUserViewModel();
+
+
+                return new JsonResult { Data = UserView, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+
+        
+              }
 
         
       

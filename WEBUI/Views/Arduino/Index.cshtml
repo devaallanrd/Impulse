@@ -1,43 +1,46 @@
 ﻿
 <div class="row">
-    <div class="col-md-12 text-center">
+    <div class="col-md-2">
+
+
+    </div>
+    <div class="col-md-8 text-center">
         <h2>Consultas Marchamo</h2>
    
-         <input id="idU" name="id" type="text" class="form-control" placeholder="Su ID" />
+         <input style="margin-left:31%"  id="idU" name="id" type="text" class="form-control" placeholder="Su ID" />
        
       
-        <br/>  <button onclick="getUserData()" class="btn btn-danger"> Buscar </button> 
-        <p>
+        <br/>  <button onclick="getUserData()" class="btn btn-danger "> Buscar </button> 
+        <hr />
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Propietario</th>
+                    <th>ID</th>
 
-        </p>
+                    <th>Auto</th>
+                    <th>Vencido</th>
+                    <th>Multas</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="search-prop"></td>
+                    <td id="search-id"></td>
+                    <td id="search-auto"></td>
+                    <td id="search-vencido"></td>
+                    <td id="search-multas"></td>
+                    <td id="search-total"></td>
+                </tr>
+
+            </tbody>
+        </table>
 
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-2">
       
-     
-        <div class="panel">
-            <div class="panel-heading">
-                <h2>Resultados</h2>
-            </div>
-            <div class="panel-body">
-                Usted tiene un total de :
-                <h3 id="multas"></h3> Multas
-                <label>Nombre</label>
-                <h2 id="nombre"></h2>
-                <label>Tarjeta</label>
-                <h5 id="tarjeta"></h5>
-                <label>Auto</label>
-                <h4 id="auto"></h4>
-                <label>Multas</label>
-            </div>
-            <div class="panel-footer">
-
-            </div>
-        </div>
-
-      
-       
 
    </div>
    
