@@ -37,6 +37,7 @@
             <p>&copy; @DateTime.Now.Year - Marchamos Bot</p>
         </footer>
     </div>
+    <!-- This is a Branch Test-->
     <script>function GetArduino() { $.get("/Home/GetArduino", function (data) { $("#codex").addClass('hidden'); j = ""; j = data; if (j != "") { $("#codex").html(data); $("#codex").removeClass('hidden'); setTimeout(function () { GetArduino(); }, 2000); } }); }</script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
