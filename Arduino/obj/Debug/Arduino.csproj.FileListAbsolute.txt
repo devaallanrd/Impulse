@@ -12,6 +12,5 @@ C:\Users\Josue\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.pdb
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.exe.config
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.exe
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.pdb
-C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.csprojResolveAssemblyReference.cache
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.exe
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.pdb

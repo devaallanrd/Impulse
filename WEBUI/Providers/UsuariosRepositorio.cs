@@ -121,8 +121,41 @@ namespace WEBUI.Providers
                 // Provide for exceptions.
             }
         }
-       
-       
+
+        public string InsertarUsuario(string codex, string id, string name, string aut, string ven)
+        
+        {
+            Providers.usuario ord = new Providers.usuario
+            {
+                code = codex,
+                id = id,
+                propietario = name,
+                automovil = aut,
+                vencido = ven,
+                multas = 0
+                // …
+            };
+
+            // Add the new object to the Orders collection.
+            Arduino.usuarios.InsertOnSubmit(ord);
+
+            // Submit the change to the database.
+            try
+            {
+                Arduino.SubmitChanges();
+                return "true";
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                // Make some adjustments.
+                // ...
+                // Try again.
+                Arduino.SubmitChanges();
+                return "false";
+            }
+           
+        }
 
     }
 }
