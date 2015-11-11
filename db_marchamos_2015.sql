@@ -1,5 +1,6 @@
+use Arduino;
 --drop table usuarios;
---select * from usuarios;
+select * from usuarios;
 --Update la columna vencido de una fila con el mismo codigo
 update  usuarios 
   set vencido = 'false' where code = '25351484850546652535357523';
@@ -8,9 +9,14 @@ update  usuarios
   set multas = 0;
 
   update usuarios
-  set vencido = 'false'
+  set automovil = 'BMW 502'
+  where id='4321'
+
+  update usuarios
+  set vencido = 'true'
   where id='1234';
 
+  --crear tabla usuarios base datos
 Create table usuarios(
   
    code  varchar (50) primary key ,
@@ -23,6 +29,7 @@ Create table usuarios(
 );
 
 insert into usuarios values ('25351484850546652535357523', '1234', 'Jhonny Rojas', 'BMW 502',   'false' , 0);
+
 insert into usuarios values ('25351484850546657684849673', '4321', 'Pablo Zamora', 'Ford ',  'true'  , 0);
 insert into usuarios values ('25351484850546967657051543', '1324', 'Josue Pereira', 'Citroen', 'true',  0);
 

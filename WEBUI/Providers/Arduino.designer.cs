@@ -22,7 +22,7 @@ namespace WEBUI.Providers
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="arduino")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Arduino")]
 	public partial class ArduinoDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace WEBUI.Providers
     #endregion
 		
 		public ArduinoDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["arduinoConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["ArduinoConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -70,14 +70,6 @@ namespace WEBUI.Providers
 			get
 			{
 				return this.GetTable<usuario>();
-			}
-		}
-		
-		public System.Data.Linq.Table<paso> pasos
-		{
-			get
-			{
-				return this.GetTable<paso>();
 			}
 		}
 	}
@@ -260,69 +252,6 @@ namespace WEBUI.Providers
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.pasos")]
-	public partial class paso
-	{
-		
-		private string _code;
-		
-		private System.Nullable<System.DateTime> _datex;
-		
-		private string _vencido;
-		
-		public paso()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_code", DbType="VarChar(50)")]
-		public string code
-		{
-			get
-			{
-				return this._code;
-			}
-			set
-			{
-				if ((this._code != value))
-				{
-					this._code = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_datex", DbType="Date")]
-		public System.Nullable<System.DateTime> datex
-		{
-			get
-			{
-				return this._datex;
-			}
-			set
-			{
-				if ((this._datex != value))
-				{
-					this._datex = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vencido", DbType="VarChar(15)")]
-		public string vencido
-		{
-			get
-			{
-				return this._vencido;
-			}
-			set
-			{
-				if ((this._vencido != value))
-				{
-					this._vencido = value;
-				}
 			}
 		}
 	}

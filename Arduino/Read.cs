@@ -41,7 +41,7 @@ namespace Arduino
 
         public  String read()
         {
-            using (SerialPort sp = new SerialPort("COM4", 9600))
+            using (SerialPort sp = new SerialPort("COM13", 9600))
             {
                 try
                 {
