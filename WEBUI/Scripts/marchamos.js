@@ -52,6 +52,7 @@ function getUserData() {
 
 function RegisterT() {
 
+    //THERE YOU GO :d
     var s = $('#idR').val();
     var s = $('#prR').val();
     var s = $('#prR').val();
