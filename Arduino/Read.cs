@@ -43,7 +43,7 @@ namespace Arduino
        //Lectura en el puerto para esperar mensaje del arduino
         public  String read()
         {
-            using (SerialPort sp = new SerialPort("COM4", 9600)) // Pasarlos por parámetro
+            using (SerialPort sp = new SerialPort("COM13", 9600)) // Pasarlos por parámetro
             {
                 try
                 {

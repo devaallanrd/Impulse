@@ -19,3 +19,4 @@ J:\Proyecto_LabTEM\Impulse\Arduino\bin\Debug\Arduino.exe
 J:\Proyecto_LabTEM\Impulse\Arduino\bin\Debug\Arduino.pdb
 J:\Proyecto_LabTEM\Impulse\Arduino\obj\Debug\Arduino.exe
 J:\Proyecto_LabTEM\Impulse\Arduino\obj\Debug\Arduino.pdb
+J:\Proyecto_LabTEM\Impulse\Arduino\obj\Debug\Arduino.csprojResolveAssemblyReference.cache
