@@ -17,8 +17,8 @@ insert into usuarios values ('25351484850546657684849673', '4321', 'Pablo Zamora
 insert into usuarios values ('25351484850546967657051543', '1324', 'Josue Pereira', 'Citroen', 'true',  0);
 
 
-
---drop table usuarios;
+delete DELETE FROM usuarios
+WHERE id=´1234´;--drop table usuarios;
 --select * from usuarios;
 --Update la columna vencido de una fila con el mismo codigo
 update  usuarios 
