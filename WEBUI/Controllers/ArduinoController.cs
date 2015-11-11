@@ -71,6 +71,16 @@ namespace WEBUI.Controllers
 
 
         }
+
+        public string Insert(string code, string id, string prop, string aut, string ven)
+        {
+            String user = new UsuariosRepositorio().InsertarUsuario(code,id,prop,aut,ven);
+
+            if (user == "true")
+                return "Inserted";
+            else
+                return "Not Today Bitch";
+        }
       
     }
 }
