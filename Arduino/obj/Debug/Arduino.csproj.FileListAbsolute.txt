@@ -14,3 +14,8 @@ C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.exe
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\bin\Debug\Arduino.pdb
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.exe
 C:\Users\aallanrd\Documents\GitHub\Impulse\Arduino\obj\Debug\Arduino.pdb
+J:\Proyecto_LabTEM\Impulse\Arduino\bin\Debug\Arduino.exe.config
+J:\Proyecto_LabTEM\Impulse\Arduino\bin\Debug\Arduino.exe
+J:\Proyecto_LabTEM\Impulse\Arduino\bin\Debug\Arduino.pdb
+J:\Proyecto_LabTEM\Impulse\Arduino\obj\Debug\Arduino.exe
+J:\Proyecto_LabTEM\Impulse\Arduino\obj\Debug\Arduino.pdb

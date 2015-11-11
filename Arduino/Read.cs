@@ -29,7 +29,7 @@ namespace Arduino
         {
 
             String[] portNames = SerialPort.GetPortNames();
-            string found = Array.Find( portNames, s => s.Equals("COM4") ); //Pasarlo por parámetro
+            string found = Array.Find( portNames, s => s.Equals("COM13") ); //Pasarlo por parámetro
             if (found == null)
             {
                 return false;
