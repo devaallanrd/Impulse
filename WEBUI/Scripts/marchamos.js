@@ -13,6 +13,7 @@
                 $("#pulse-vencido").html(data[4]);
                 $("#pulse-multas").html(data[5]);
                 //hola
+                //ola ke ase
                 $("#xyz").trigger('load');
                 $("#xyz").trigger('play');
 
