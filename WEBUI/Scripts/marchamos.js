@@ -12,7 +12,7 @@
                 $("#pulse-auto").html(data[3]);
                 $("#pulse-vencido").html(data[4]);
                 $("#pulse-multas").html(data[5]);
-                //hola
+                //hola que hace
                 $("#xyz").trigger('load');
                 $("#xyz").trigger('play');
 
